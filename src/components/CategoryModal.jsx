@@ -34,10 +34,6 @@ const CategoryModal = ({ isVisible, onClose, onSelect }) => {
         <Modal
             isVisible={isVisible}
             onBackdropPress={onClose}
-            animationIn="slideInUp"
-            animationOut="slideOutDown"
-            swipeDirection="down"
-            backdropOpacity={0.5}
             useNativeDriver={true}
             style={styles.modal}
         >

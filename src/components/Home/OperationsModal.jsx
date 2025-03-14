@@ -21,7 +21,6 @@ const OperationsModal = ({
     amount = 0,
     onOpenCategoryModal,
     onOpenDatePicker,
-    onOpenColorModal,
     onOpenNoteModal,
     name,
     setName,
@@ -156,19 +155,6 @@ const OperationsModal = ({
                     <Text style={[styles.detailedLabel, { marginBottom: 10 }]}>
                         Detailed
                     </Text>
-                    {/* <TouchableOpacity
-                        style={[styles.inputRow, { marginBottom: 10 }]}
-                        onPress={onOpenColorModal}
-                    >
-                        <Text style={styles.inputLabel}>Color</Text>
-                        <View style={styles.rightSide}>
-                            {color ? (
-                                <Text style={styles.inputText}>{color}</Text>
-                            ) : (
-                                <ArrowRightSVG />
-                            )}
-                        </View>
-                    </TouchableOpacity> */}
                     <TouchableOpacity
                         style={[styles.inputRow, { marginBottom: 30 }]}
                         onPress={onOpenNoteModal}

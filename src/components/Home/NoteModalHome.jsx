@@ -24,11 +24,7 @@ const NoteModalHome = ({ isVisible, onClose, closeButtonText = "Save", descripti
             isVisible={isVisible}
             onBackdropPress={onClose}
             onSwipeComplete={onClose}
-            swipeDirection="down"
             style={styles.modal}
-            animationIn="slideInUp"
-            animationOut="slideOutDown"
-            backdropOpacity={0.5}
             useNativeDriver={true}
         >
             <View style={[styles.modalContainer, { height: modalHeight }]}>

@@ -51,7 +51,7 @@ const HomeScreen = () => {
     const groupedTx = {};
     txs.forEach((tx) => {
         const header = getDateHeader(tx.date);
-        if (!groupedTx[header]) groupedTx[header] = [];
+        if (!groupedTx[header]) {groupedTx[header] = [];}
         groupedTx[header].push(tx);
     });
     const groupKeys = Object.keys(groupedTx);
@@ -88,11 +88,15 @@ const HomeScreen = () => {
 
     const handleOperationsModalHide = () => {
         if (openCategoryAfterHide) {
+            setTimeout(() => {
+                setCategoryModalVisible(true);
+            }, 300);
             setOpenCategoryAfterHide(false);
-            setCategoryModalVisible(true);
         } else if (openNoteAfterHide) {
+            setTimeout(() => {
+                setNoteModalVisible(true);
+            }, 300);
             setOpenNoteAfterHide(false);
-            setNoteModalVisible(true);
         }
     };
 
@@ -265,7 +269,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#20252C',
         borderBottomLeftRadius: 35,
         borderBottomRightRadius: 35,
-        overflow: 'visible',
+        overflow: 'hidden',
     },
     queenImage: {
         position: 'absolute',
