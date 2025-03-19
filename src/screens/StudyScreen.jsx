@@ -13,12 +13,12 @@ const StudyScreen = () => {
             <Text style={styles.title}>Study</Text>
             <FlatList
                 data={items}
-                keyExtractor={(item) => item.title}
+                keyExtractor={(item) => item.id.toString()}
                 numColumns={2}
                 columnWrapperStyle={styles.cardsContainer}
                 renderItem={({ item }) => (
                     <StudyCard
-                        name={item.name}
+                        name={item.title}
                         imageUri={item.image_link}
                         onPress={() => setSelectedItem(item)}
                     />
