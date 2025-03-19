@@ -13,18 +13,22 @@ const StudyScreen = () => {
             <Text style={styles.title}>Study</Text>
             <FlatList
                 data={items}
-                keyExtractor={(item) => item.id.toString()}
+                keyExtractor={(item) => item.title}
                 numColumns={2}
                 columnWrapperStyle={styles.cardsContainer}
                 renderItem={({ item }) => (
-                    <StudyCard name={item.name} onPress={() => setSelectedItem(item)} />
+                    <StudyCard
+                        name={item.name}
+                        imageUri={item.image_link}
+                        onPress={() => setSelectedItem(item)}
+                    />
                 )}
             />
             {selectedItem && (
                 <CustomModal
                     isVisible={!!selectedItem}
                     name={selectedItem.name}
-                    description={selectedItem.description}
+                    description={selectedItem.text}
                     onClose={() => setSelectedItem(null)}
                 />
             )}
